@@ -12,9 +12,11 @@
 /dataSources/
 /dataSources.local.xml
 # Client ignored files
-/client/obj
-Client.csproj
+/Client/obj
+/Client/bin
 # Server ignored files
-/.idea
-/.vs
-/obj
+/TrailRP/.idea
+/TrailRP/.vs
+/TrailRP/obj
+/TrailRP/bin
+
