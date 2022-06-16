@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="rage-sharp">
+        <HintPath>..\..\runtime\rage-sharp.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="RD /S /Q &quot;D:\Games\RAGEMP - Server\server-files\client_packages\cs_packages\&quot;&#xA;&#xA;xcopy  &quot;D:\Games\RAGEMP - Server\server-files\dotnet\resources\Client\cs_packages\*.cs&quot; &quot;D:\Games\RAGEMP - Server\server-files\client_packages\cs_packages\&quot; /e /y /i /r" />
+    </Target>
+
+</Project>
