@@ -11,20 +11,13 @@ namespace TrailRP
             player.KickSilent();
         }
         
-        [Command("getpos", "~o~Usage: /getpos", GreedyArg = true)]
+        [Command("GetPosition", "~o~Usage: /getpos", Alias = "getPos", GreedyArg = true)]
         public void GetPos_Command(Player player)
         {
             NAPI.Util.ConsoleOutput($"{player.Name}'s position is {player.Position}");
             NAPI.Util.ConsoleOutput($"{player.Name}'s heading is {player.Heading}");
         }
 
-        [Command("freeze")]
-        public void Freeze_Command(Player player, Player target, bool freeze)
-        {
-            NAPI.ClientEvent.TriggerClientEvent(target, "FreezePlayer", freeze);
-            
-        }
-        
         [Command("SetSprintMultiplier", "~o~Usage: ~w~/setSprintMultiplier [value]", Alias = "ssm", GreedyArg = true)]
         public void SetMultiplier_Command(Player player, string value)
         {

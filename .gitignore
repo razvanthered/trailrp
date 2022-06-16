@@ -1,0 +1,7 @@
+client/bin
+client/obj
+client/client.csproj
+trailrp/.idea
+trailrp/.vs
+trailrp/bin
+trailrp/obj
